@@ -3,6 +3,7 @@ import Location from "../models/locationModel.js";
 // POST /api/update-location  → From Arduino
 export const updateLocation = async (req, res) => {
   try {
+    console.log("Incoming /update-location body:", req.body, "headers:", req.headers);
     const { id, lat, lng } = req.body;
     if (!id || !lat || !lng) {
       return res.status(400).json({ error: "Missing fields" });
