@@ -1,6 +1,6 @@
 import express from "express";
 import { updateLocation, getLocationById, getAllLatestLocations } from "../controllers/locationController.js";
-import { verifyApiKey } from "../middleware/apiKeyMiddleware.js";
+import { verifyApiKey } from "../middleware/apikeyMiddleware.js";
 
 const router = express.Router();
 
